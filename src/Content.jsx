@@ -1,7 +1,15 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { ArticlesIndex } from "./ArticlesIndex";
+
 export function Content() {
   return (
     <div>
-      <h1>Welcome to React!</h1>
+      <ArticlesIndex />
     </div>
   );
+
+  function handleArticlesIndex() {
+    axios.get();
+  }
 }
