@@ -16,7 +16,7 @@ export function Content() {
 
   return (
     <div>
-      <h1>Welcome to my News Page</h1>
+      <h1 className="text-3xl font-bold underline">Welcome to my News Page</h1>
       <div>
         Search: <input type="text" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
         <button onClick={handleArticlesIndex}>Search</button>
