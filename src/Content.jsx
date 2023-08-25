@@ -12,14 +12,19 @@ export function Content() {
     });
   }
 
-  useEffect(handleArticlesIndex, []);
+  useEffect(handleArticlesIndex, [searchTerm]);
 
   return (
-    <div>
+    <div className="container">
       <h1 className="text-3xl font-bold underline">Welcome to my News Page</h1>
       <div>
-        Search: <input type="text" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
-        <button onClick={handleArticlesIndex}>Search</button>
+        Search:{" "}
+        <input
+          className="border-4 border-sky-500 border-solid rounded-md hover:border-double border-violet-700 bg-violet-200"
+          type="text"
+          value={searchTerm}
+          onChange={(event) => setSearchTerm(event.target.value)}
+        />
       </div>
       <ArticlesIndex articles={articles} />
     </div>
